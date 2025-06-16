@@ -37,7 +37,7 @@ public class SecurityConfig {
 
     // Add swagger or other public URLs here if needed
     private static final String[] WHITE_LIST_URL = {
-            "/api/v1/auth/**",
+            "/auth/**",
             "/ws-notifications/**",
             "/ws-chat/**",
             "/v3/api-docs/**",          // OpenAPI docs
