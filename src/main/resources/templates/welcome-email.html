@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html><!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to InstaClone</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #fafafa;
+            padding: 30px;
+        }
+        .container {
+            max-width: 480px;
+            background-color: #fff;
+            padding: 30px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .header {
+            text-align: center;
+            font-size: 28px;
+            color: #e1306c;
+            margin-bottom: 15px;
+        }
+        .logo {
+            display: block;
+            margin: 0 auto 20px;
+            width: 100px;
+        }
+        .content {
+            font-size: 16px;
+            color: #333;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background-color: #e1306c;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 13px;
+            color: #888;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="InstaClone" class="logo">
+    <div class="header">Welcome to InstaClone!</div>
+    <div class="content">
+        <p>Hi <strong th:text="${username}">User</strong>,</p>
+        <p>We're thrilled to have you join the InstaClone community! Start sharing moments, discovering new stories, and connecting with the world.</p>
+        <p>Click the button below to explore your feed:</p>
+        <a href="#" class="btn">Go to InstaClone</a>
+    </div>
+    <div class="footer">
+        Enjoy the experience. © 2025 InstaClone
+    </div>
+</div>
+</body>
+</html>

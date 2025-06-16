@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>OTP Verification</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #4e54c8, #8f94fb);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .otp-card {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 2rem 3rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+
+        .otp-card h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .otp {
+            font-size: 32px;
+            font-weight: bold;
+            color: #ffd700;
+            margin: 20px 0;
+        }
+
+        .info {
+            font-size: 14px;
+            color: #ddd;
+        }
+    </style>
+</head>
+<body>
+<div class="otp-card">
+    <h2>Welcome, <span th:text="${username}">User</span>!</h2>
+    <p>Your One-Time Password (OTP) for login is:</p>
+    <div class="otp" th:text="${otp}">123456</div>
+    <p class="info">This OTP is valid for the next <strong>5 minutes</strong>. Please do not share it with anyone.</p>
+</div>
+</body>
+</html>

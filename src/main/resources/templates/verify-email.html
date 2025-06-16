@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Verify your email</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container {
+            max-width: 480px;
+            margin: auto;
+            background: #ffffff;
+            border: 1px solid #dbdbdb;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        .header h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 32px;
+            color: #405de6;
+            margin: 0;
+        }
+        .content h2 {
+            color: #262626;
+            font-weight: 600;
+        }
+        .content p {
+            color: #444;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .verify-button {
+            background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+            margin-top: 30px;
+        }
+        @media (max-width: 500px) {
+            .container {
+                padding: 20px;
+            }
+            .verify-button {
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>InstaClone</h1>
+    </div>
+
+    <div class="content">
+        <h2>Hey <span th:text="${username}">User</span> 👋,</h2>
+        <p>
+            Thanks for joining <strong>InstaClone</strong>! To get started, please confirm your email address by clicking the button below.
+        </p>
+    </div>
+
+    <div class="button-container">
+        <a th:href="${verifyUrl}" class="verify-button">Verify Your Email</a>
+    </div>
+
+    <div class="footer">
+        <p>This link will expire in 30 minutes.</p>
+        <p>If you didn’t sign up for InstaClone, you can safely ignore this email.</p>
+        <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;">
+        <p>© 2025 InstaClone Inc. All rights reserved.</p>
+    </div>
+</div>
+</body>
+</html>
