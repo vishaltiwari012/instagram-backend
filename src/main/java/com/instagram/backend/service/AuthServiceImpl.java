@@ -303,7 +303,7 @@ public class AuthServiceImpl implements AuthService {
         resetToken.setExpiryDate(LocalDateTime.now().plusMinutes(RESET_TOKEN_EXPIRY_MINUTES));
 
         passwordResetTokenRepository.save(resetToken);
-        String resetUrl = appUrl + "/api/v1/auth/reset-password?token=" + token;
+        String resetUrl = appUrl + "/auth/reset-password?token=" + token;
 
         sendEmail(user, "Reset Your Password", "forgot-password-email", Map.of(
                 "username", user.getUsername(),
@@ -381,7 +381,7 @@ public class AuthServiceImpl implements AuthService {
 
         VerificationToken savedToken = verificationTokenRepository.save(verificationToken);
 
-        String verifyUrl = appUrl + "/api/v1/auth/verify-email?token=" + token;
+        String verifyUrl = appUrl + "/auth/verify-email?token=" + token;
 
         sendEmail(user, "Verify Your Email", "verify-email", Map.of(
                 "username", user.getUsername(),
