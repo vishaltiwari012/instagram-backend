@@ -19,6 +19,9 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
+      - name: 🔐 Give execute permission to mvnw
+        run: chmod +x mvnw
+
       - name: 🐘 Run Flyway Migrations
         run: ./mvnw flyway:migrate -Dflyway.url=${{ secrets.FLYWAY_URL }} -Dflyway.user=${{ secrets.FLYWAY_USER }} -Dflyway.password=${{ secrets.FLYWAY_PASSWORD }}
 
