@@ -73,15 +73,21 @@ management:
 springdoc:
   api-docs:
     enabled: true
-    path: /v3/api-docs
+    path: /api/v1/api-docs
   swagger-ui:
     enabled: true
-    path: /swagger-ui.html
+    path: /api/v1/swagger-ui.html
+    operationsSorter: method
+    config-url: /api/v1/v3/api-docs/swagger-config
+    url: /api/v1/v3/api-docs
 
 cloudinary:
   cloud_name: ${CLOUDINARY_CLOUD_NAME}
   api_key: ${CLOUDINARY_API_KEY}
   api_secret: ${CLOUDINARY_API_SECRET}
+
+swagger:
+  server-url: https://insta-backend-v3dr.onrender.com/api/v1
 
 
 

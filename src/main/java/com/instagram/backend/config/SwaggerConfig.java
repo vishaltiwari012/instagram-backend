@@ -9,6 +9,7 @@ import io.swagger.v3.oas.models.security.SecurityRequirement;
 import io.swagger.v3.oas.models.security.SecurityScheme;
 import io.swagger.v3.oas.models.servers.Server;
 import io.swagger.v3.oas.models.tags.Tag;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -16,6 +17,9 @@ import java.util.List;
 
 @Configuration
 public class SwaggerConfig {
+
+    @Value("${swagger.server-url}")
+    private String serverUrl;
 
     @Bean
     public OpenAPI apiInfo() {
@@ -45,6 +49,6 @@ public class SwaggerConfig {
                                 .scheme("bearer")
                                 .bearerFormat("JWT")
                                 .in(SecurityScheme.In.HEADER)))
-                .servers(List.of(new Server().url("http://localhost:8081").description("Local Auth Server")));
+                .servers(List.of(new Server().url(serverUrl).description("Dynamic Server")));
     }
 }

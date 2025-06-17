@@ -37,15 +37,16 @@ public class SecurityConfig {
 
     // Add swagger or other public URLs here if needed
     private static final String[] WHITE_LIST_URL = {
-            "/auth/**",
-            "/ws-notifications/**",
-            "/ws-chat/**",
-            "/v3/api-docs/**",          // OpenAPI docs
-            "/swagger-ui/**",           // Swagger UI
-            "/swagger-ui.html",         // Swagger UI HTML
-            "/webjars/**",              // Swagger UI dependencies (CSS, JS)
-            "/swagger-resources/**"     // Swagger resources
+            "/api/v1/auth/**",
+            "/api/v1/ws-notifications/**",
+            "/api/v1/ws-chat/**",
+            "/api/v1/v3/api-docs/**",
+            "/api/v1/swagger-ui/**",
+            "/api/v1/swagger-ui.html",
+            "/api/v1/webjars/**",
+            "/api/v1/swagger-resources/**"
     };
+
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
