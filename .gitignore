@@ -34,3 +34,4 @@ build/
 
 .env
 instagram-backend.env
+src/main/resources/application-local.yml
