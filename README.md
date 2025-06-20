@@ -30,24 +30,4 @@ A production-grade Instagram backend built with **Spring Boot**. Includes a secu
 | Database   | MySQL/PostgreSQL |
 | ORM        | Spring Data JPA |
 | Email      | JavaMailSender (SMTP) |
-| Tools      | Maven, Postman, Docker (Optional) |
-
----
-
-## 📂 Folder Structure
-
-src/
-├── main/
-│ ├── java/com/instagram/backend/
-│ │ ├── config/
-│ │ ├── controller/
-│ │ ├── dto/
-│ │ ├── entity/
-│ │ ├── exception/
-│ │ ├── repository/
-│ │ ├── security/
-│ │ └── service/
-│ │ └── websocket/
-│ │ └── utils/
-│ └── resources/
-│ └── application.yml
+| Tools      | Maven, Postman, Docker |
